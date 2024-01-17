@@ -3,20 +3,49 @@
 }
 
 body {
-  background: url(./images/bg-desktop.svg) center/cover fixed;
   background-color: rgb(103, 74, 174);
   min-height: 100vh;
-  margin: 30px 40px 25px;
+  margin: 0;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  height: 100vh;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
 }
 
 header img {
   width: 20%;
+  margin: 30px 40px 0;
+
+  @media screen and (max-width: 950px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 610px) {
+    width: 40%;
+  }
 }
 
 main {
   display: grid;
   grid-template-columns: 55% 45%;
-  margin: 50px 0 20px;
+  margin: 50px 40px 20px;
+
+  @media screen and (max-width: 950px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 50px auto 20px;
+  }
 }
 
 .main-left img {
@@ -31,6 +60,14 @@ main {
   font-family: "Poppins", sans-serif;
   color: rgb(250, 250, 250);
   margin-top: 25px;
+
+  @media screen and (max-width: 950px) {
+    margin-top: 35px;
+  }
+
+  @media screen and (max-width: 470px) {
+    font-size: 1.5rem;
+  }
 }
 
 .main-right p {
@@ -53,6 +90,18 @@ main {
   height: 2.5em;
   margin-top: 25px;
   transition: 0.2s;
+
+  @media screen and (max-width: 950px) {
+    margin: 25px auto 15px;
+  }
+
+  @media screen and (max-width: 610px) {
+    width: 15rem;
+  }
+
+  @media screen and (max-width: 470px) {
+    width: 13rem;
+  }
 }
 
 .main-right a:hover {
@@ -62,14 +111,27 @@ main {
 }
 
 footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 40px;
+
+  @media screen and (max-width: 950px) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 footer ul {
   display: flex;
   list-style: none;
+
+  @media screen and (max-width: 950px) {
+    justify-content: space-around;
+    padding: 0;
+  }
 }
 
 footer li {

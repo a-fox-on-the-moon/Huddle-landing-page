@@ -16,7 +16,7 @@ header img {
 main {
   display: grid;
   grid-template-columns: 55% 45%;
-  margin: 50px 0 30px;
+  margin: 50px 0 20px;
 }
 
 .main-left img {
@@ -39,6 +39,9 @@ main {
 }
 
 .main-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   text-decoration: none;
@@ -46,7 +49,9 @@ main {
   background-color: rgb(250, 250, 250);
   box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  padding: 12px 45px;
+  width: 10em;
+  height: 2.5em;
+  margin-top: 25px;
   transition: 0.2s;
 }
 
@@ -69,13 +74,14 @@ footer ul {
 
 footer li {
   margin: 0 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(250, 250, 250);
+  text-decoration: none;
   background: transparent;
   border: 1px solid rgb(250, 250, 250);
   border-radius: 50px;
